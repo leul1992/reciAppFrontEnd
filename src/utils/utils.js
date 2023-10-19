@@ -1,6 +1,5 @@
 import axios from "axios";
 // eslint-disable-next-line no-unused-vars
-import { API_KEY, ALTERNATIVE_KEY, API_ALTERNATIVE } from "./config";
 
 const apiKey = process.env.API_KEY;
 
