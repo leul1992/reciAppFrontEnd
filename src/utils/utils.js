@@ -7,9 +7,9 @@ const apiKey = process.env.API_KEY;
 const getEndpoint = (id) => {
   console.log(apiKey);
   if (id) {
-    return `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`;
+    return `https://api.spoonacular.com/recipes/${id}/information?apiKey=a2d97f11eb174547adb78c7185b3f9c5`;
   } else {
-    return `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`;
+    return `https://api.spoonacular.com/recipes/complexSearch?apiKey=a2d97f11eb174547adb78c7185b3f9c5`;
   }
 };
 function getOptions(id) {
