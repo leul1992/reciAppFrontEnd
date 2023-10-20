@@ -20,7 +20,7 @@ import {
 
 const getFavourites = async (userId) => {
   try {
-    const response = await fetch('https://reciappbackend.onrender.com/api/showfavourites', {
+    const response = await fetch('/api/showfavourites', {
       method: 'POST',
       body: JSON.stringify({userId}),
       headers: { 'Content-Type': 'application/json' },
