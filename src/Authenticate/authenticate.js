@@ -9,7 +9,7 @@ function useAuth() {
     // Define signup function to dispatch signup action
     const signup = async (formData) => {
       try {
-        const response = await fetch('/api/signup', {
+        const response = await fetch('https://reciappbackend.onrender.com/api/signup', {
           method: 'POST',
           body: JSON.stringify(formData),
           headers: { 'Content-Type': 'application/json' },
@@ -28,7 +28,7 @@ function useAuth() {
     // Define login function to dispatch login action
     const login = async (formData) => {
       try {
-        const response = await fetch('/api/login', {
+        const response = await fetch('https://reciappbackend.onrender.com/api/login', {
           method: 'POST',
           body: JSON.stringify(formData),
           headers: { 'Content-Type': 'application/json' },
