@@ -84,7 +84,7 @@ function Login({onSubmit, error, alreadyHaveAcc, toSignUp, toLogIn}) {
                     ></input>
                     <span
                     onClick={handleTogglePasswordVisibility}
-                    className="text-stone-400 cursor-pointer"
+                    className="text-stone-400 self-center pl-1 cursor-pointer"
                     >
                         {formData.showPassword ? <FaEyeSlash /> : <FaEye />}
                     </span>

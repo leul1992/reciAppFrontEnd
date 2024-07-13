@@ -81,7 +81,7 @@ const handleSignupSubmit = async (e) => {
                 className="w-11/12 text-sm outline-none"></input>
                 <span
                     onClick={()=>handleTogglePasswordVisibility(0)}
-                    className="text-stone-400 cursor-pointer"
+                    className="text-stone-400 self-center pl-1 cursor-pointer"
                     >
                         {formData.showPassword[0] ? <FaEyeSlash /> : <FaEye />}
                     </span>
@@ -97,7 +97,7 @@ const handleSignupSubmit = async (e) => {
                 className="w-11/12 text-sm outline-none"></input>
                 <span
                     onClick={()=>handleTogglePasswordVisibility(1)}
-                    className="text-stone-400 cursor-pointer"
+                    className="text-stone-400 self-center pl-1 cursor-pointer"
                     >
                         {formData.showPassword[1] ? <FaEyeSlash /> : <FaEye />}
                     </span>
