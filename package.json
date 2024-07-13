@@ -2,7 +2,6 @@
   "name": "reciapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://reci-app-back-end-c9.vercel.app/",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.2",

@@ -1,5 +1,6 @@
 import { useSelector, useDispatch} from "react-redux";
 import { loginUser, loginError, signupUser, signupError, logoutUser } from "../actions";
+import { BASE_URL } from "..";
 
 // Define custom hooks for auth state and dispatch
 function useAuth() {
@@ -9,7 +10,7 @@ function useAuth() {
     // Define signup function to dispatch signup action
     const signup = async (formData) => {
       try {
-        const response = await fetch('/api/signup', {
+        const response = await fetch(`${BASE_URL}/api/signup`, {
           method: 'POST',
           body: JSON.stringify(formData),
           headers: { 'Content-Type': 'application/json' },
@@ -28,11 +29,12 @@ function useAuth() {
     // Define login function to dispatch login action
     const login = async (formData) => {
       try {
-        const response = await fetch('/api/login/', {
+        const response = await fetch(`${BASE_URL}/api/login/`, {
           method: 'POST',
           body: JSON.stringify(formData),
           headers: { 'Content-Type': 'application/json' },
         });
+        console.log(await fetch(`${BASE_URL}/api/`));
         const data = await response.json();
         if (data.success) {
           dispatch(loginUser(data.user));

@@ -1,6 +1,7 @@
+import { BASE_URL } from "..";
 export const saveToFavourites = async (userId, recipeId, recipeName, recipeImage) => {
     try {
-      const response = await fetch('/api/saveFavourites', {
+      const response = await fetch(`${BASE_URL}/api/saveFavourites`, {
         method: 'POST',
         body: JSON.stringify({userId, recipeId, recipeName, recipeImage}),
         headers: { 'Content-Type': 'application/json' },
@@ -13,7 +14,7 @@ export const saveToFavourites = async (userId, recipeId, recipeName, recipeImage
 
 export const deleteFromFavourites = async (userId, recipeId) => {
   try{
-    await fetch('/api/deleteFromfavourites', {
+    await fetch(`${BASE_URL}/api/deleteFromfavourites`, {
       method: 'POST',
       body: JSON.stringify({userId, recipeId}),
       headers:{ "content-type": "application/json"},
@@ -26,7 +27,7 @@ export const deleteFromFavourites = async (userId, recipeId) => {
 
 export const getFavourites = async (userId) => {
   try {
-    const response = await fetch("/api/showfavourites", {
+    const response = await fetch(`${BASE_URL}/api/showfavourites`, {
       method: "POST",
       body: JSON.stringify({ userId }),
       headers: { "Content-Type": "application/json" },
